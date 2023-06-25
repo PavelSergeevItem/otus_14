@@ -9,11 +9,11 @@
  1. Создал виртуальную машину при помощи вагрант и вагрантфайл из методички.
  2. Подключился к машине, перешел в режим рут.
  3. Созадл пользователей. 
-`udo useradd otusadm && sudo useradd otus`
-4. Задал этим ползователям пароли.
+`sudo useradd otusadm && sudo useradd otus`
+4. Задал этим пользователям пароли.
 `echo "Otus2022!" | sudo passwd --stdin otusadm && echo "Otus2022!" | sudo passwd --stdin otus`
 5.  Создал группу admin `sudo groupadd -f admin`.
-6.  Добавил пользователя vagrant,root и otusadm в группу admin `usermod otusadm -a -G admin && usermod root -a -G admin && usermod vagrant -a -G admin`.
+6.  Добавил пользователя vagrant, root и otusadm в группу admin `usermod otusadm -a -G admin && usermod root -a -G admin && usermod vagrant -a -G admin`.
 7.  Проверил, что два недавно созданных пользователей могу подключится к вирутальной машние через ssh/
 ```
 ssh otus@192.168.57.10
